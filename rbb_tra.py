@@ -38,9 +38,9 @@ def transform_label(value):
         return 2
 df["class_1"]=df.class_1.apply(transform_label)
 df1["class_1"]=df1.class_1.apply(transform_label)
-path_1=r'C:\Users\sounak\Downloads\reasearch\rbb\train'
-path_2=r'C:\Users\sounak\Downloads\reasearch\rbb\valid'
-os.chdir(r'C:\Users\sounak\Downloads\reasearch\rbb\train')
+path_1=r'C:\\reasearch\rbb\train'
+path_2=r'C:\\reasearch\rbb\valid'
+os.chdir(r'C:\\reasearch\rbb\train')
 
 filenames = glob.glob("**/*.jpg",recursive = True)
 filenames.sort()
