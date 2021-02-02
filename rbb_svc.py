@@ -30,9 +30,9 @@ def transform_label(value):
         return 2
 df["class_1"]=df.class_1.apply(transform_label)
 df1["class_1"]=df1.class_1.apply(transform_label)
-path_1=r'C:\Users\sounak\Downloads\reasearch\rbb\train'
-path_2=r'C:\Users\sounak\Downloads\reasearch\rbb\valid'
-os.chdir(r'C:\Users\sounak\Downloads\reasearch\rbb\train')
+path_1=r'C:\\reasearch\rbb\train'
+path_2=r'C:\\reasearch\rbb\valid'
+os.chdir(r'C:\\reasearch\rbb\train')
 #os.chdir(path_1)
 filenames = glob.glob("**/*.jpg",recursive = True)
 filenames.sort()
@@ -110,13 +110,13 @@ import cv2
 import os
 class LocalBinaryPatterns:
 	def __init__(self, numPoints, radius):
-		# store the number of points and radius
+		# store teh number of points and radius
 		self.numPoints = numPoints
 		self.radius = radius
 	def describe(self, image, eps=1e-7):
-		# compute the Local Binary Pattern representation
-		# of the image, and then use the LBP representation
-		# to build the histogram of patterns
+		# compute teh Local Binary Pattern representation
+		# of teh image, and then use teh LBP representation
+		# to build teh histogram of patterns
 		lbp = feature.local_binary_pattern(image, self.numPoints,
 			self.radius, method="uniform")
 		(hist, _) = np.histogram(lbp.ravel(),
@@ -125,7 +125,7 @@ class LocalBinaryPatterns:
 		# normalize teh histogram
 		hist = hist.astype("float")
 		hist /= (hist.sum() + eps)
-		# return the histogram of Local Binary Patterns
+		# return teh histogram of Local Binary Patterns
 		return hist
 desc = LocalBinaryPatterns(24,8)
 data=[]
